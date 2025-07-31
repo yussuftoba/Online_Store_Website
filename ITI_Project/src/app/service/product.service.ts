@@ -24,7 +24,7 @@ export class ProductService {
   }
 
   editProduct(product:any, id:any){
-    return this.http.patch(`${this.apiUrl}/${id}`, product); 
+    return this.http.put(`${this.apiUrl}/${id}`, product); 
   }
 
   deleteProduct(id:any){

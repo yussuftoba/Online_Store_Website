@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common'; // Needed for *ngFor, *ngIf
 import { FormsModule } from '@angular/forms';   // Import FormsModule here
 import { ProductCardComponent } from '../product-card/product-card.component'; // Import ProductCardComponent
 import { ProductService } from '../../service/product.service';
+import { RouterLink } from '@angular/router';
 
 interface Product {
   id: number;
@@ -18,7 +19,7 @@ interface Product {
 @Component({
   selector: 'app-product-list',
   standalone: true, // Mark component as standalone
-  imports: [CommonModule, FormsModule, ProductCardComponent], // Declare imports here
+  imports: [CommonModule, FormsModule, ProductCardComponent,RouterLink], // Declare imports here
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
@@ -78,9 +79,8 @@ export class ProductListComponent implements OnInit {
     }
   }
 
-  onAddProduct(): void {
-    alert('Add Product button clicked! (This would navigate to an Add Product form)');
-    // In a real application, you'd use Angular Router:
-    // this.router.navigate(['/add-product']);
-  }
+  onProductDeleted(id: number): void {
+  this.filteredProducts = this.filteredProducts.filter(p => p.id !== id);
+  this.products = this.products.filter(p => p.id !== id);
+}
 }
