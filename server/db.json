@@ -80,5 +80,21 @@
       "stock": 6,
       "rating": 3.6
     }
+  ],
+  "cart": [
+    {
+      "id": "ec74",
+      "productId": "4",
+      "name": "Leather Wallet",
+      "price": 29.99,
+      "quantity": 4
+    },
+    {
+      "id": "c396",
+      "productId": "3",
+      "name": "helling shoes",
+      "price": 69.99,
+      "quantity": 1
+    }
   ]
 }

@@ -11,6 +11,5 @@ export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {path:'products/:id', component: AddProductComponent},
   {path:'cart', component:CartComponent},
-  {path:'cart/:id', component:CartComponent},
   {path:'**', component: NotFoundComponent}
 ];

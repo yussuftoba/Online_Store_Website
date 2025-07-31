@@ -15,7 +15,7 @@
     </div>
   </div>
   <div class="product-actions">
-    <button class="action-button add-to-cart-button" [routerLink]="['/cart', product.id]">Add to Card</button>
+    <button class="action-button add-to-cart-button" (click)="onAddToCart()">Add to Card</button>
     <button class="action-button edit-button" [routerLink]="['/products', product.id]">Edit Product</button>
     <button class="action-button delete-button" (click)="onDeleteProduct(product.id)">Delete Product</button>
   </div>
